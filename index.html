@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="성동욱"> <!--포트폴리오 작성 시 반드시 적을 것-->
     <meta name="keywords" name="포트폴리오, html, css, 영상">
-    <meta name="description" name="안녕하세요. 디자인 영상 전문입니다....">
+    <meta name="description" name="안녕하세요. 디자인 영상 전문입니다.............">
     <meta name="robots" content="noindex,nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,15 +28,28 @@
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"> <!-- 햄버거 버튼-->
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+                                            
                 <div id="navbarNav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav" style="text-align: end;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="text-align: end;">
                         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#portfolio" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="navbarDropdown" role="button" aria-expanded="false">Portfolio</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="">디자인</a></li>
+                                <li><a class="dropdown-item" href="">영상</a></li>
+                                <li><a class="dropdown-item" href="">피그마</a></li>
+                                <li><hr dropdown-divider></li>
+                                <li><a class="dropdown-item" href="">WEB</a></li>  
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
+                    <form class="d-flex">
+                        <input type="search" class="form-control me-2" placeholder="검색하세요" aria-label="search"> 
+                        <button type="submit" class="btn btn-outline-success">Search</button>
+                    </form>
                 </div>
             </div>
         </nav>
