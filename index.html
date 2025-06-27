@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="./css/app.css">
     <title>욱 포트폴리오</title>
 </head>
-<body>
+<body class="bg-white">
     <!-- header -->
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-warning bg-warning">
+            <div class="container my-4">
                 <a href="#" class="navbar-brand domine-wook">
                     <!-- <img src="" alt=""> 여기 파비콘(svg) 넣어도 됨.-->
                 WOOK Portfolio</a>
@@ -35,22 +35,22 @@
                         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a href="#portfolio" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="navbarDropdown" role="button" aria-expanded="false">Portfolio</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="">디자인</a></li>
+                                <li><a class="dropdown-item " href="" >디자인</a></li>
                                 <li><a class="dropdown-item" href="">영상</a></li>
                                 <li><a class="dropdown-item" href="">피그마</a></li>
                                 <li><hr dropdown-divider></li>
                                 <li><a class="dropdown-item" href="">WEB</a></li>  
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
-                    <form class="d-flex">
+                    <!-- <form class="d-flex">
                         <input type="search" class="form-control me-2" placeholder="검색하세요" aria-label="search"> 
-                        <button type="submit" class="btn btn-outline-success">Search</button>
-                    </form>
+                        <button type="submit" class="btn btn-outline-success btn">Search</button>
+                    </form> -->
                 </div>
             </div>
         </nav>
@@ -58,170 +58,281 @@
     <!-- / header -->
 
     <main>
-        <section id="aaa" class="my-3">
-            <div class="container">
+        <section id="aaa">
+            <div class="cover-container">
                 <div class="row">
-                    <div class="col-md-5 order-1 order-md-0">
-                        <img src="./images/leaves-7541743_640.jpg" class="img-fluid" alt="">
+                    <div class="mb-4 col-lg-12 text-center">
+                        <img src="./images/awards.jpg" class="img-fluid" alt="">
+                    </div>                   
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="portfolio"  data-aos="fade-up ">
+            <!-- modal -->
+            <div class="container border rounded-3 bg-white text-center shadow-sm">
+                <h2 class="d-inline-block mt-5 mb-1 py-3 px-5 bg-danger text-white shadow border-2 rounded-3">그래픽 | 영상편집 | 피그마</h2>
+                <!-- 분류 버튼 -->
+                <div class="my-4">
+                    <button type="button" class="shadow mx-1 px-3 btn btn-dark filter-btn btn-lg" data-filter="all">전체</button>
+                    <button type="button" class="shadow my-2 mx-1 px-3 btn btn-secondary filter-btn btn-lg" data-filter="design">그래픽디자인</button>
+                    <button type="button" class="shadow my-2 mx-1 px-3 btn btn-secondary filter-btn btn-lg" data-filter="video">영상편집</button>
+                    <button type="button" class="shadow my-2 mx-1 px-3 btn btn-secondary filter-btn btn-lg" data-filter="figma">피그마</button>
+                </div>
+                
+                <!-- <input type="text" id="searchInput" class="form-control border border-dark mx-auto d-block" style="width:500px; height:50px;"   placeholder="검색어를 입력하세요"> -->
+                
+                <!-- 포트폴리오 아이템 -->
+                <div class="row mt-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="design">
+                        <img src="./images/thum봄바람.jpg" alt="디자인 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#designModal1">               
+                            <h5 class="mt-3 ㅡㅌ-3 fw-semibold">포스터 디자인 - 1</h5>
+                            <hr class="border border-primary" style="margin: 0 auto;">
+                            <p class="mt-2">Midjourney(AI) + Photoshop + Illustrator</p>   
                     </div>
-                    <div class="col-md-7 order-0 order-md-1">
-                        <h1 class="mt-5">Centum</h1>
-                        <p class="mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit temporibus ipsum dolorum, expedita deleniti iure, repellendus quibusdam, iste eum ratione maiores. Sint, eius nostrum! Delectus inventore illum maxime quidem architecto?</p>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="design">
+                        <img src="./images/thumb영화제.jpg" alt="디자인 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#designModal2">
+                        <h5 class="text-center mt-3 fw-semibold">포스터 디자인 - 2</h5>
+                        <hr class="border border-primary" style="width:200px; margin: 0 auto;">
+                        <p class="mt-2">Photoshop</p>   
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="design">
+                        <img src="./images/thumb부산에다.jpg" alt="디자인 3" class="img-fluid" data-bs-toggle="modal" data-bs-target="#designModal2">
+                        <h5 class="mt-3 fw-semibold">포스터 디자인 - 3</h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2">Midjourney(AI) + Dall-E 3(AI) + Photoshop</p>   
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="video">
+                        <img src="./images/포스터-목업_2.jpg" alt="비디오 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#videoModal1">
+                        <h5 class="mt-3 fw-semibold">영상편집 - 1</h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2">Midjourney(AI) + Dall-E 3(AI) + Photoshop</p> 
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="video">
+                        <img src="./images/wilamowice-5249675_640.jpg" alt="비디오 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#videoModal2">
+                        <h5 class="mt-3 fw-semibold">영상편집 - 2</h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2">Midjourney(AI) + Dall-E 3(AI) + Photoshop</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="video">
+                        <img src="./images/wilamowice-5249675_640.jpg" alt="비디오 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#videoModal2">
+                        <h5 class="mt-3 fw-semibold">영상편집 - 2</h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2">Midjourney(AI) + Dall-E 3(AI) + Photoshop</p>
                     </div>
                     
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="figma">
+                        <img src="./images/wilamowice-5249675_640.jpg" alt="피그마 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#figmaModal1">
+                        <h5 class="mt-3 fw-semibold">영상편집 - 2</h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2">Midjourney(AI) + Dall-E 3(AI) + Photoshop</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="figma">
+                        <img src="./images/wilamowice-5249675_640.jpg" alt="피그마 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#figmaModal1">
+                        <h5 class="mt-3 fw-semibold">영상편집 - 2</h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2">Midjourney(AI) + Dall-E 3(AI) + Photoshop</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="figma">
+                        <img src="./images/wilamowice-5249675_640.jpg" alt="피그마 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#figmaModal1">
+                        <h5 class="mt-3 fw-semibold">영상편집 - 2</h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2">Midjourney(AI) + Dall-E 3(AI) + Photoshop</p>
+                    </div>
+
+                  
+            </div>
+        </div>
+        </section>
+        <section id="portfolio"  data-aos="fade-up">
+            <!-- modal -->
+            <div class="container mt-5 border rounded-3 text-center shadow-sm ">
+                <h2 class="d-inline-block mt-5 mb-1 py-3 px-4 bg-success text-white shadow border-2 rounded-3">문화 기획 | 유튜브 기획</h2>
+                
+                <!-- 분류 버튼 -->
+                <div class="my-4">
+                    <button type="button" class="shadow mx-2 px-3 btn btn-dark filter-btn btn-lg" data-filter="all">전체</button>
+                    <button type="button" class="shadow my-2 mx-2 px-2 btn btn-secondary filter-btn btn-lg" data-filter="design">문화 기획</button>
+                    <button type="button" class="shadow my-2 mx-2 px-3 btn btn-secondary filter-btn btn-lg" data-filter="video">유튜브 기획</button>
                 </div>
-                <div class="row my-3">
-                        <div class="col">
-                            <div class="card bg-secondary text-white py-3 text-center">
-                                <div class="card-body">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, porro et aperiam minus doloribus iusto! Voluptatum incidunt nobis quod.</p>
-                                </div>
-                            </div>
-                        </div>
+                
+                <!-- <input type="text" id="searchInput" class="form-control border border-dark mx-auto d-block" style="width:500px; height:50px;"   placeholder="검색어를 입력하세요"> -->
+                
+                <!-- 포트폴리오 아이템 -->
+                <div class="row mt-5">
+                    <div class="col-md-6 col-sm-12 portfolio-item" data-category="design">
+                        <img src="./images/문화기획 1 - 썸네일.png" alt="디자인 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#designModal1">               
+                        <h5 class="mt-4 fw-semibold">&lt;문화 기획&gt; 2024 경계선상의영화제: 아리랑공동체의 회복</h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2">2024 영화의전당 우리동네시네마 지원사업 선정 및 사업 운영 총괄</p>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 portfolio-item" data-category="design">
+                        <img src="./images/문화기획-2---썸네일.png" alt="디자인 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#designModal2">
+                        <h5 class="text-center mt-4 fw-semibold">&lt;문화 기획&gt; 2030 부산세계박람회 유치 기원 무형유산 한마당</h5>
+                        <hr class="border border-primary" style=" margin: 0 auto;">
+                        <p class="mt-2">2024 부산무형유산한마당 공연 총감독 및 사업 담당자</p>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 portfolio-item" data-category="design">
+                        <img src="./images/유튜브 기획 - 1.png" alt="디자인 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#designModal2">
+                        <h5 class="text-center mt-3 fw-semibold">&lt;유튜브 기획&gt; Walkable City_보행자가 안심할 수 있는 도시</h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2">방송콘텐츠진흥재단 대한민국1인방송대상 제작지원사업 선정 및 사업 운영 총괄</p>   
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 portfolio-item" data-category="video">
+                        <img src="./images/리퀘스트 시네마.jpg" alt="비디오 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#videoModal1">
+                        <h5 class="text-center mt-3 fw-semibold">&lt;문화 기획&gt; 2023 부산국제영화제 리퀘스트 시네마 프로그램 기획</h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2">2023 부산국제영화제 리퀘스트시네마 선정 및 [은막 저편의 여인, 정훈희] 행사 기획</p> 
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 portfolio-item" data-category="video">
+                        <img src="./images/thumb부산에다.jpg" alt="비디오 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#videoModal1">
+                        <h5 class="mt-3 fw-semibold">&lt;문화 기획&gt; 2022 경계선상의영화제: 경계 너머, 장률</h5></h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2">2022 부산영화문화네트워크 영화문화활동가 양성사업 선정 및 사업운영 총괄</p> 
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 portfolio-item rounded-3" data-category="design">
+                        <img src="./images/유튜브 기획 - 2.png" alt="디자인 3" class="img-fluid" data-bs-toggle="modal" data-bs-target="#designModal2">
+                        <h5 class="mt-3 fw-semibold">&lt;유튜브 기획&gt; 보행자 권리 찾기 : 횡단보도에서 죽고 싶지 않아 </h5>
+                        <hr class="border border-primary" style="margin: 0 auto;">
+                        <p class="mt-2 ">2022 한국언론진흥재단 우리지역뉴스크리에이터 양성사업 사업 선정 및 사업운영 총괄</p>   
                     </div>
             </div>
-
+        </div>
         </section>
+    
 
-        <section id="career">
-            <div class="container">
-                <h2 class="text-center my-5">My Career Timeline</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-item-content">
-                            <h3>2018</h3>
-                            <p>Started my Journey as a junior Developer</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-item-content">
-                            <h3>2019</h3>
-                            <p>Started my Journey as a junior Developer</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-item-content">
-                            <h3>2020</h3>
-                            <p>Started my Journey as a junior Developer</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-item-content">
-                            <h3>2021</h3>
-                            <p>Started my Journey as a junior Developer</p>
-                        </div>
-                    </div>
+        <section id="card" data-aos="fade-up">
+            <div class="container border rounded-3 mt-5">
+                <div class="text-center">
+                    <h3 class="shadow d-inline-block my-5 mb-1 py-3 px-5 bg-primary text-white rounded-3">매체 발표 원고</h3>
                 </div>
-            </div>
-        </section>
-
-        <section id="skill">
-            <div class="container my-5">
-                <h2 class="text-center mb-3">나의 스킬</h2>
-                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, consequatur optio corrupti tempore facere pariatur illo assumenda accusamus eveniet provident fuga iste minus iusto nemo. Odit debitis rem vero repellendus!</p>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <div class="d-flex justify-content-between">
-                            <span>HTML</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="progress" style="height:30px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-bs-target="50">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="d-flex justify-content-between">
-                            <span>CSS</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="progress" style="height:30px;">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 0%;" data-bs-target="50">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="d-flex justify-content-between">
-                            <span>HTML</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="progress" style="height:30px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-bs-target="50">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="d-flex justify-content-between">
-                            <span>HTML</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="progress" style="height:30px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-bs-target="50">
-
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                </div>
-            </div>
-        </section>
-
-        <section id="card">
-            <div class="container">
-                <div class="row mt-3">
-                    <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <a href="./card1.html" target="_blank"><img src="./images/tulips-9592711_640.webp" class="card-img-top mt-3" alt=""></a>
-
+                
+                <div class="row mt-5">
+                    <div class="card border-light col-lg-3 col-md-6 col-sm-12">
+                        <a href="./card1.html" target="_blank"><img src="./images/indieicritic.png.jpg" class="card-img-top mt-3" alt=""></a>
                         <div class="card-body">
-                            <div class="card-title">
-                                Hello Centum        
+                            <div class="card-title mt-1">
+                                <h6 class="fw-semibold text-center">&lt;영화비평지&gt; 인디크리틱</h6>       
                             </div>
-                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            <p class="card-text mt-4">출판: 마산영화구락부</p>
+                            <p class="card-text">참여: 필진</p>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
                                 <a href="./card1.html" target="_blank"><button class="btn btn-success">자세히 보기</button></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <a href="./card2.html" target="_blank"><img src="./images/leaves-7541743_640.jpg" class="card-img-top mt-3" alt=""></a>
+                    <div class="card border-light col-lg-3 col-md-6 col-sm-12">
+                        <a href="./card2.html" target="_blank"><img src="./images/cricicb.jpg" class="card-img-top mt-3" alt=""></a>
 
                         <div class="card-body">
-                            <div class="card-title">
-                                Hello Centum        
+                            <div class="card-title mt-1">
+                                <h6 class="fw-semibold text-center">&lt;영화비평지&gt; 크리틱b</h6>
                             </div>
-                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            <p class="card-text mt-4">출판: 마산영화구락부</p>
+                            <p class="card-text">참여: 필진</p>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
                                 <a href="./card2.html" target="_blank"><button class="btn btn-success">자세히 보기</button></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <a href="./card2.html" target="_blank"><img src="./images/wilamowice-5249675_640.jpg" class="card-img-top mt-3" alt=""></a>
+                    <div class="card border-light col-lg-3 col-md-6 col-sm-12">
+                        <a href="./card2.html" target="_blank"><img src="./images/mcritic.jpg" class="card-img-top mt-3" alt=""></a>
 
                         <div class="card-body">
-                            <div class="card-title">
-                                Hello Centum        
+                            <div class="card-title mt-1">
+                                <h6 class="fw-semibold text-center">&lt;영화비평지&gt; M다시보기 플러스</h6>        
                             </div>
-                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            <p class="card-text mt-4">출판: 마산영화구락부</p>
+                            <p class="card-text">참여: 필진</p>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
                                 <a href="./card1.html" target="_blank"><button class="btn btn-success">자세히 보기</button></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <a href="./card1.html" target="_blank"><img src="./images/leaves-7541743_640.jpg" class="card-img-top mt-3" alt=""></a>
+                    <div class="card border-light col-lg-3 col-md-6 col-sm-12">
+                        <a href="./card1.html" target="_blank"><img src="./images//mcritic1.jpg" class="card-img-top mt-3" alt=""></a>
 
                         <div class="card-body">
-                            <div class="card-title">
-                                Hello Centum        
+                            <div class="card-title mt-1">
+                                <h6 class="fw-semibold text-center">&lt;영화비평지&gt; M다시보기 1호</h6> 
                             </div>
-                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            <p class="card-text mt-4">출판: 마산영화구락부</p>
+                            <p class="card-text">참여: 필진</p>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
                                 <a href="./card1.html" target="_blank"><button class="btn btn-success">자세히 보기</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="card border-light col-lg-3 col-md-6 col-sm-12">
+                        <a href="./card1.html" target="_blank"><img src="./images/2024busan.jpg" class="card-img-top mt-3" alt=""></a>
+                        <div class="card-body">
+                            <div class="card-title mt-1">
+                                <h6 class="fw-semibold text-center"> &lt;프로그램북&gt; <br></h6>    
+                                <h6 class="fw-semibold text-center">2024 부산독립영화제</h6>        
+                            </div>
+                            <p class="card-text mt-4">출판: 마산영화구락부</p>
+                            <p class="card-text">참여: 필진</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
+                                <a href="./card1.html" target="_blank"><button class="mt-2 btn btn-success">자세히 보기</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-light col-lg-3 col-md-6 col-sm-12">
+                        <a href="./card2.html" target="_blank"><img src="./images/2024intercity.jpg" class="card-img-top mt-3" alt=""></a>
+
+                        <div class="card-body">
+                            <div class="card-title mt-1">
+                                <h6 class="fw-semibold text-center"> &lt;프로그램북&gt; <br></h6>    
+                                <h6 class="fw-semibold text-center">2024 부산인터시티영화제</h6>    
+                            </div>
+                            <p class="card-text mt-4">출판: 마산영화구락부</p>
+                            <p class="card-text">참여: 필진</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
+                                <a href="./card2.html" target="_blank"><button class="mt-2 btn btn-success">자세히 보기</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-light col-lg-3 col-md-6 col-sm-12">
+                        <a href="./card2.html" target="_blank"><img src="./images/2023busan.jpg" class="card-img-top mt-3" alt=""></a>
+
+                        <div class="card-body">
+                            <div class="card-title mt-1">
+                                <h6 class="fw-semibold text-center"> &lt;프로그램북&gt; <br></h6>    
+                                <h6 class="fw-semibold text-center">2023 부산독립영화제</h6>        
+                            </div>
+                            <p class="card-text mt-4">출판: 마산영화구락부</p>
+                            <p class="card-text">참여: 필진</p> 
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
+                                <a href="./card1.html" target="_blank"><button class="mt-2 btn btn-success">자세히 보기</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-light col-lg-3 col-md-6 col-sm-12">
+                        <a href="./card1.html" target="_blank"><img src="./images/2022busan.jpg" class="card-img-top mt-3" alt=""></a>
+
+                        <div class="card-body">
+                            <div class="card-title mt-1">
+                                <h6 class="fw-semibold text-center"> &lt;프로그램북&gt; <br></h6>    
+                                <h6 class="fw-semibold text-center">2022 부산독립영화제</h6>        
+                            </div>
+                            <p class="card-text mt-4">출판: 마산영화구락부</p>
+                            <p class="card-text">참여: 필진</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
+                                <a href="./card1.html" target="_blank"><button class="mt-2 btn btn-success">자세히 보기</button></a>
                             </div>
                         </div>
                     </div>
@@ -230,150 +341,94 @@
             </div>
         </section>
 
-
-
-        <section id="portfolio">
-            <!-- modal -->
-            <div class="container mt-5">
-                <h2 class="text-center mb-3">Design & Video Portfolio</h2>
-                <input type="text" id="searchInput" class="form-control" placeholder="검색어를 입력하세요">
-                
-                <!-- 분류 버튼 -->
+        <section id="card" data-aos="fade-up">
+            <div class="container border rounded-3 mt-5">
                 <div class="text-center">
-                    <button type="button" class="mt-5 btn btn-primary filter-btn" data-filter="all">전  체</button>
-                    <button type="button" class="mt-5 btn btn-primary filter-btn" data-filter="design">디자인</button>
-                    <button type="button" class="mt-5 btn btn-primary filter-btn" data-filter="video">영  상</button>
-                    <button type="button" class="mt-5 btn btn-primary filter-btn" data-filter="figma">피그마</button>
-
+                    <h3 class="shadow d-inline-block my-5 mb-1 py-3 px-5 bg-secondary text-white rounded-3">방송출연 및 행사진행 이력</h3>
                 </div>
-                <!-- 포트폴리오 아이템 -->
-                <div class="row mt-4" data-aos="fade-up">
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="design">
-                        <img src="./images/leaves-7541743_640.jpg" alt="디자인 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#designModal1">
-                        <h4 class="text-center mt-2">디자인 프로젝트1</h4>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="design">
-                        <img src="./images/tulips-9592711_640.webp" alt="디자인 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#designModal2">
-                        <h4 class="text-center mt-2">디자인 프로젝트 2</h4>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="video">
-                        <img src="./images/wilamowice-5249675_640.jpg" alt="비디오 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#videoModal1">
-                        <h4 class="text-center mt-2">영상 프로젝트 1</h4>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="video">
-                        <img src="./images/wilamowice-5249675_640.jpg" alt="비디오 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#videoModal2">
-                        <h4 class="text-center mt-2">영상 프로젝트 2</h4>
-                    </div> <br>
-                    
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="figma">
-                        <img src="./images/wilamowice-5249675_640.jpg" alt="피그마 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#figmaModal1">
-                        <h4 class="text-center mt-2">피그마 프로젝트 1</h4>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-category="figma">
-                        <img src="./images/wilamowice-5249675_640.jpg" alt="피그마 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#figmaModal2">
-                        <h4 class="text-center mt-2">피그마 프로젝트 2</h4>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="tabs" class="tabs sections my-5">
-            <div class="container section-title" data-aos="fade-up">
-                <h2 class="text-center">Departments</h2>
-                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, non aut?</p>
-            </div>
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row">
-                    <div class="col-lg-2">
-                        <ul class="nav nav-tabs flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link active show"  data-bs-toggle="tab" href="#tabs-tab-1">디자인 1</a>
-                            </li>
-                             <li class="nav-item">
-                                <a class="nav-link"  data-bs-toggle="tab" href="#tabs-tab-2">디자인 2</a>
-                            </li>
-                             <li class="nav-item">
-                                <a class="nav-link"  data-bs-toggle="tab" href="#tabs-tab-3">디자인 3</a>
-                            </li>
-                             <li class="nav-item">
-                                <a class="nav-link"  data-bs-toggle="tab" href="#tabs-tab-4">디자인 4</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"  data-bs-toggle="tab" href="#tabs-tab-5">디자인 5</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-10 mt-5 mt-lg-0">
-                        <div class="tab-content">
-                            <div class="tab-pane active show" id="tabs-tab-1">
-                                <div class="row">
-                                    <div class="col-lg-8 details order-2 order-lg-1">
-                                        <h3>디자인 1 설명을 적어라</h3>
-                                        <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ut soluta illum, praesentium dolores veniam sapiente eligendi, sunt non velit, dolorem numquam deserunt quasi. Libero esse dolores sint voluptatem eius!</p>
-                                    </div>
-                                    <div class="col-lg-4 order-1 order-lg-2">
-                                        <a href="./images/horse.jpg"><img src="./images/horse.jpg" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
+                
+                <div class="row mt-3">
+                    <div class="card border-light col-lg-4 col-md-6 col-sm-12">
+                        <a href="./card1.html" target="_blank"><img src="./images/방송 인터뷰 - 1.png" class="card-img-top" alt=""></a>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h5 class="fw-semibold text-center">&lt;방송출연&gt; KBS 뉴스광장</h5>
+                                <hr class="border border-primary" style="margin: 0 auto;">        
                             </div>
-                            <div class="tab-pane" id="tabs-tab-2">
-                                <div class="row">
-                                    <div class="col-lg-8 details order-2 order-lg-1">
-                                        <h3>디자인 2 설명을 적어라</h3>
-                                        <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ut soluta illum, praesentium dolores veniam sapiente eligendi, sunt non velit, dolorem numquam deserunt quasi. Libero esse dolores sint voluptatem eius!</p>
-                                    </div>
-                                    <div class="col-lg-4 order-1 order-lg-2">
-                                        <a href="./images/horse2.jpg"><img src="./images/horse2.jpg" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-tab-3">
-                                <div class="row">
-                                    <div class="col-lg-8 details order-2 order-lg-1">
-                                        <h3>디자인 3 설명을 적어라</h3>
-                                        <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ut soluta illum, praesentium dolores veniam sapiente eligendi, sunt non velit, dolorem numquam deserunt quasi. Libero esse dolores sint voluptatem eius!</p>
-                                    </div>
-                                    <div class="col-lg-4 order-1 order-lg-2">
-                                        <a href="./images/horse3.jpg"><img src="./images/horse3.jpg" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-tab-4">
-                                <div class="row">
-                                    <div class="col-lg-8 details order-2 order-lg-1">
-                                        <h3>디자인 4 설명을 적어라</h3>
-                                        <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ut soluta illum, praesentium dolores veniam sapiente eligendi, sunt non velit, dolorem numquam deserunt quasi. Libero esse dolores sint voluptatem eius!</p>
-                                    </div>
-                                    <div class="col-lg-4 order-1 order-lg-2">
-                                        <a href="./images/leaves-7541743_640.jpg"><img src="./images/leaves-7541743_640.jpg" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-tab-5">
-                                <div class="row">
-                                    <div class="col-lg-8 details order-2 order-lg-1">
-                                        <h3>디자인 5 설명을 적어라</h3>
-                                        <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ut soluta illum, praesentium dolores veniam sapiente eligendi, sunt non velit, dolorem numquam deserunt quasi. Libero esse dolores sint voluptatem eius!</p>
-                                    </div>
-                                    <div class="col-lg-4 order-1 order-lg-2">
-                                        <a href="./images/tulips-9592711_640.webp"><img src="./images/tulips-9592711_640.webp" class="img-fluid" alt=""></a>
-                                    </div>
-                                </div>
+                            <p class="card-text mt-3 text-center">유튜브 콘텐츠 관련 인터뷰</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
+                                <a href="./card1.html" target="_blank"><button class="btn btn-success">자세히 보기</button></a>
                             </div>
                         </div>
                     </div>
-
+                    <div class="card border-light col-lg-4 col-md-6 col-sm-12">
+                        <a href="./card2.html" target="_blank"><img src="./images/방송 인터뷰 - 2.png" class="card-img-top" alt=""></a>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h5 class="fw-semibold text-center">&lt;방송출연&gt; KNN 굿모닝 투데이</h5>
+                                <hr class="border border-primary" style="margin: 0 auto;">        
+                            </div>
+                            <p class="card-text mt-3 text-center">유튜브 콘텐츠 관련 인터뷰</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
+                                <a href="./card2.html" target="_blank"><button class="btn btn-success">자세히 보기</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-light col-lg-4 col-md-6 col-sm-12">
+                        <a href="./card2.html" target="_blank"><img src="./images/방송 인터뷰 - 3.png" class="card-img-top" alt=""></a>
+                        <div class="card-body">
+                           <div class="card-title">
+                                <h5 class="fw-semibold text-center">&lt;방송출연&gt; LG헬로비전 헬로TV뉴스</h5>
+                                <hr class="border border-primary" style="margin: 0 auto;">        
+                            </div>
+                            <p class="card-text mt-3 text-center">유튜브 콘텐츠 관련 인터뷰</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
+                                <a href="./card2.html" target="_blank"><button class="btn btn-success">자세히 보기</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-light col-lg-4 col-md-6 col-sm-12 mt-2">
+                        <a href="./card1.html" target="_blank"><img src="./images/방송 인터뷰 - 1.png" class="card-img-top" alt=""></a>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h5 class="fw-semibold text-center">&lt;마산무학산영화제&gt;</h5>
+                                <hr class="border border-primary" style="margin: 0 auto;">        
+                            </div>
+                            <p class="card-text mt-3 text-center">유튜브 콘텐츠 관련 인터뷰</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
+                                <a href="./card1.html" target="_blank"><button class="btn btn-success">자세히 보기</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-light col-lg-4 col-md-6 col-sm-12 mt-2">
+                        <a href="./card2.html" target="_blank"><img src="./images/방송 인터뷰 - 2.png" class="card-img-top" alt=""></a>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h5 class="fw-semibold text-center">&lt;굿모닝 투데이&gt; KNN</h5>
+                                <hr class="border border-primary" style="margin: 0 auto;">        
+                            </div>
+                            <p class="card-text mt-3 text-center">유튜브 콘텐츠 관련 인터뷰</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
+                                <a href="./card2.html" target="_blank"><button class="btn btn-success">자세히 보기</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-light col-lg-4 col-md-6 col-sm-12 mt-2">
+                        <a href="./card2.html" target="_blank"><img src="./images/방송 인터뷰 - 3.png" class="card-img-top" alt=""></a>
+                        <div class="card-body">
+                           <div class="card-title">
+                                <h5 class="fw-semibold text-center">&lt;헬로비전 뉴스&gt; LG헬로비전</h5>
+                                <hr class="border border-primary" style="margin: 0 auto;">        
+                            </div>
+                            <p class="card-text mt-3 text-center">유튜브 콘텐츠 관련 인터뷰</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-center">
+                                <a href="./card2.html" target="_blank"><button class="btn btn-success">자세히 보기</button></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
+                
+                   
             </div>
         </section>
 
@@ -387,7 +442,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="./images/horse.jpg" class="img-fluid mb-3" alt="">
+                                    <img src="./images/film_poster.jpg" class="img-fluid mb-3" alt="">
                                 </div>
                                 
                                 <div class="modal-footer">
@@ -485,6 +540,95 @@
                                 </div>
                         </div>        
                      </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- <section id="skill">
+            <div class="container my-5">
+                <h2 class="text-center mb-3">나의 스킬</h2>
+                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, consequatur optio corrupti tempore facere pariatur illo assumenda accusamus eveniet provident fuga iste minus iusto nemo. Odit debitis rem vero repellendus!</p>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>HTML</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="progress" style="height:30px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-bs-target="50">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>CSS</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="progress" style="height:30px;">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 0%;" data-bs-target="50">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>HTML</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="progress" style="height:30px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-bs-target="50">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>HTML</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="progress" style="height:30px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-bs-target="50">
+
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section> -->
+
+        <section id="career">
+            <div class="container text-center mt-5 border rounded-3">
+                <h2 class="shadow d-inline-block mt-5 py-3 px-5 bg-dark text-light rounded-3">프로젝트 타임라인</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-item-content">
+                            <h3>2025</h3>
+                            <p>Started my Journey as a junior Developer</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-item-content">
+                            <h3>2024</h3>
+                            <p>Started my Journey as a junior Developer</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-item-content">
+                            <h3>2023</h3>
+                            <p>Started my Journey as a junior Developer</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-item-content">
+                            <h3>2022</h3>
+                            <p>Started my Journey as a junior Developer</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
