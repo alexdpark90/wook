@@ -8,21 +8,99 @@
   --accent-color  : #3fbbc0;
 }
 
-.domine-wook {
-  font-family: "Domine", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+html {
+  scroll-behavior: smooth;
+}
+
+#home {
+  scroll-margin-top: 150px;
+}
+
+.video-wrapper {
+  width: 80%;           /* 20% 축소 효과 */
+  aspect-ratio: 16 / 9;  /* 반응형 비율 유지 */
+  max-width: 960px;      /* 데스크탑에서 너무 커지지 않도록 */
+}
+
+.video-wrapper {
+  width: 80%;
+  aspect-ratio: 16 / 9;
+  max-width: 960px;
+  margin-bottom: 1rem;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0 12px; /* 좌우 여백 조절 */
 }
 
 .portfolio-item {
   cursor: pointer;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.0rem;
+}
+
+.card-text {
+  line-height: 10px;
+}
+
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.modal-footer p {
+  font-size: 0.95rem;
 }
 
 .modal-dialog {
-  max-width: 80%;
+  max-width: 95vw;  /* 뷰포트 너비의 95% */
+  max-height: 90vh; /* 뷰포트 높이의 90% */
   margin: auto;
+}
+
+.modal-content {
+  max-height: 90vh;
+  overflow: auto;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+
+}
+
+.modal-img {
+   max-width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+
+  /* 🎯 아래가 새로 추가되는 핵심 */
+  border: 4px solid #212529;        /* 액자 테두리 */
+  background-color: #ffffff;        /* 배경 흰색 (흰 여백이 있는 이미지용) */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); /* 살짝 그림자 */
+  border-radius: 6px;               /* 모서리 약간 둥글게 */
+  margin: 0 auto;                   /* 가운데 정렬 */
+}
+
+.modal-description {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  overflow-y: auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  border-left: 2px solid #dee2e6;  /* 밝은 회색 */
+  padding-left: 2rem;
+  box-shadow: inset 5px 0 10px rgba(0,0,0,0.05);
 }
 
 .footer-a {
@@ -120,7 +198,7 @@
   background-color: var(--background-color);
 }
 #tabs .details h3 {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
 }
