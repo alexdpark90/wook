@@ -45,6 +45,7 @@ html {
 .portfolio-item {
   cursor: pointer;
   margin-bottom: 1.0rem;
+
 }
 
 .card-text {
@@ -60,7 +61,13 @@ html {
 
 .modal-footer p {
   font-size: 0.95rem;
+
 }
+
+.card-text {
+  line-height: 10px;
+}
+
 
 .modal-dialog {
   max-width: 95vw;  /* 뷰포트 너비의 95% */
