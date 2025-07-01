@@ -16,6 +16,11 @@ html {
   scroll-margin-top: 150px;
 }
 
+.section-title {
+  scroll-margin-top: 280px;
+}
+
+
 .video-wrapper {
   width: 80%;           /* 20% 축소 효과 */
   aspect-ratio: 16 / 9;  /* 반응형 비율 유지 */
