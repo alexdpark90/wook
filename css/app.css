@@ -13,14 +13,13 @@ html {
 }
 
 #home {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 300px;
 }
 
 .section-title {
   scroll-margin-top: 300px;
   font-weight: 550;
 }
-
 
 .video-wrapper {
   width: 80%;           /* 20% 축소 효과 */
