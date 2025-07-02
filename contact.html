@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,43 +13,61 @@
     <link rel="apple-touch-icon" href="./images/image.png">
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="./css/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/app.css">
     <title>욱 포트폴리오</title>
 </head>
-<body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        // 메뉴가 열려 있는 경우에만 닫기
+        if (navbarCollapse.classList.contains("show")) {
+          new bootstrap.Collapse(navbarCollapse).hide();
+        }
+      });
+    });
+  });
+</script>
+<body class="bg-white">
     <!-- header -->
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a href="./index.html" class="navbar-brand domine-wook">
-                    <!-- <img src="" alt=""> 여기 파비콘(svg) 넣어도 됨.-->
-                WOOK Portfolio</a>
+        <nav class="navbar navbar-expand-lg navbar-warning bg-warning">
+            <div class="container flex-column align-items-center d-flex py-3">
+    <!-- 로고 -->
+                <a class="border border-3 border-dark bg-white rounded-3 px-5 navbar-brand domine-wook mx-auto mt-1 mb-1" style="font-size: 2.2rem; font-weight: 1000;">Portfolio Box</a>
 
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"> <!-- 햄버거 버튼-->
-                    <span class="navbar-toggler-icon"></span>
+    <!-- 햄버거 버튼 (모바일용) -->
+                <button class="navbar-toggler mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
                 </button>
-                                            
-                <div id="navbarNav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="text-align: end;">
-                        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./index.html#career">Career</a></li>
-                        <li class="nav-item dropdown">
-                            <a href="#portfolio" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="navbarDropdown" role="button" aria-expanded="false">Portfolio</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="">디자인</a></li>
-                                <li><a class="dropdown-item" href="">영상</a></li>
-                                <li><a class="dropdown-item" href="">피그마</a></li>
-                                <li><hr dropdown-divider></li>
-                                <li><a class="dropdown-item" href="">WEB</a></li>  
-                            </ul>
+
+    <!-- 메뉴 -->
+                <div class="collapse navbar-collapse mt-2 justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav flex-wrap flex-row justify-content-center gap-2">
+                        <li class="nav-item mx-0">
+                            <a class="nav-link fw-semibold text-dark"  href="index.html#home" target="_self"><span class="btn btn-dark mt-2" style="font-size: 1.25rem; font-weight: 550;">I am</span></a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-dark"  href="index.html#contents"><span class="btn btn-dark mt-2" style="font-size: 1.25rem; font-weight: 550;">Producer</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-dark"  href="index.html#designer"><span class="btn  btn-dark mt-2" style="font-size: 1.25rem; font-weight: 550;">Designer</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-dark"  href="index.html#writer"><span class="btn btn-dark mt-2" style="font-size: 1.25rem; font-weight: 550;">Writer </span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-dark"  href="index.html#speaker"><span class="btn btn-dark mt-2" style="font-size: 1.25rem; font-weight: 550;">Speaker</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-dark" href="#contact"><span class="btn  btn-danger mt-2" style="font-size: 1.25rem; font-weight: 550;">Contact Me</span></a>
+                        </li>
                     </ul>
-                    <form class="d-flex">
-                        <input type="search" class="form-control me-2" placeholder="검색하세요" aria-label="search"> 
-                        <button type="submit" class="btn btn-outline-success">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -57,31 +75,44 @@
 
     <main>
         <section>
-            <div class="container mt-3">
+            <div class="container border border-secondary border-3 rounded-3 px-5 my-5">
                 <div class="row">
-                    <div class="col-lg-9 col-md-12">
-                        <img src="./images/horse.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-3 col-md-12">
-                        <h2>설명을 적으세요.</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, velit?</p>
+                    <div class="row" style="min-height: 80vh;">
+  <!-- 왼쪽 이미지 -->
+                        <div class="col-lg-8 col-md-12 mt-5">
+                            <img src="./images/홈페이지용.gif" class="img-fluid" alt="">
+                        </div>
+
+                <!-- 오른쪽 연락처 -->
+                        <div class="col-lg-4 col-md-12 d-flex flex-column justify-content-center align-items-center text-center">
+
+                        <!-- Call Me 영역 -->
+                            <div class="d-flex align-items-center mb-4">
+                                <h2 class="btn btn-lg btn-primary mb-0 me-3">Call Me</h2>
+                                <h4 class="mb-0 text-muted">+82 10 - 9680 - 3661</h4>
+                            </div>
+
+                        <!-- Email Me 영역 -->
+                            <div class="d-flex align-items-center mt-4">
+                                <h2 class="btn btn-lg btn-success mb-0 me-3">Email Me</h2>
+                                <h4 class="mb-0 text-muted">sdu3661@naver.com</h4>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
+        </div>
         </section>
     </main>
-
-
-
     <footer class="footer mt-auto py-3 bg-dark">
         <div class="container">
             <div class="text-center">
-                <a href="" class="footer-a text-white">Copyleft 2025 000</a>
-            </div>
+                <a class="footer-a text-white">© Copyright Seong Dong-wook All Rights Reserved</div>
         </div>
     </footer>
     <!-- / Footer -->
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/aos.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>
